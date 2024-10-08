@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#37524b">
+
+    <com.example.clockindi.CustomAnalogClock
+        android:id="@+id/customClock"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="200dp" />
+
+
+    <!-- RelativeLayout để chứa đồng hồ số -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginBottom="210dp">
+
+        <TextView
+            android:id="@+id/digitalClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:textColor="#c08058"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_centerHorizontal="true" />
+
+
+
+    </RelativeLayout>
+
+    <!-- LinearLayout để chứa Timer và Alarm -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="23dp"
+        android:orientation="vertical">
+
+        <!-- TextView cho Timer -->
+        <TextView
+            android:id="@+id/timerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:textColor="#c08058"
+            android:gravity="center"
+            android:text="--:--"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+        <!-- Nút Start Timer -->
+        <Button
+            android:id="@+id/startTimerButton"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#9E4F0D"
+            android:text="Start / Stop"
+            app:icon="@drawable/timer"
+            app:iconSize="30dp" />
+
+        <!-- Nút Reset Timer -->
+        <Button
+            android:id="@+id/resetTimerButton"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#9E4F0D"
+            android:text="Reset"
+            app:icon="@drawable/reset"
+            app:iconSize="30dp" />
+
+        <!-- Nút Set Alarm -->
+        <Button
+            android:id="@+id/setAlarmButton"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#9E4F0D"
+            android:text="Alarm"
+            app:icon="@drawable/alarm"
+            app:iconSize="30dp" />
+    </LinearLayout>
+</FrameLayout>
